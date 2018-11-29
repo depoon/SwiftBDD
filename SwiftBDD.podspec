@@ -15,7 +15,6 @@ DESC
   s.platform     = :ios, '10.0'
   s.requires_arc = true
 
-  s.source_files = 'NetworkInterceptor/Source/**/*'
-  s.dependency 'Criollo', '~> 0.4'
+  s.source_files = 'Source/**/*'
   s.dependency 'Cucumberish'
 end

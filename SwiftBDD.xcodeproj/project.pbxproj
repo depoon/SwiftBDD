@@ -47,6 +47,7 @@
 		1CC8DB1821AAF79F0017906B = {
 			isa = PBXGroup;
 			children = (
+				1CC8DBD221B05A980017906B /* Source */,
 				1CC8DB2521AAF7AE0017906B /* SwiftBDD */,
 				1CC8DB2421AAF7AE0017906B /* Products */,
 				F0E95B4594660B975D59FC15 /* Pods */,
@@ -65,10 +66,6 @@
 		1CC8DB2521AAF7AE0017906B /* SwiftBDD */ = {
 			isa = PBXGroup;
 			children = (
-				1CC8DB2C21AAF7CD0017906B /* Page */,
-				1CC8DB3621AAFD510017906B /* Steps */,
-				1CC8DB3321AAFB2D0017906B /* Cucumberish */,
-				1CC8DB2F21AAF9130017906B /* Extensions */,
 				1CC8DB2821AAF7AE0017906B /* Info.plist */,
 			);
 			path = SwiftBDD;
@@ -107,6 +104,17 @@
 				1CC8DB3F21B0381D0017906B /* AssertionSteps.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		1CC8DBD221B05A980017906B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1CC8DB2C21AAF7CD0017906B /* Page */,
+				1CC8DB3621AAFD510017906B /* Steps */,
+				1CC8DB3321AAFB2D0017906B /* Cucumberish */,
+				1CC8DB2F21AAF9130017906B /* Extensions */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		B273930C8683794C3E687D5C /* Frameworks */ = {
