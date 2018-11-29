@@ -9,9 +9,9 @@ import XCTest
 import Foundation
 import Cucumberish
 
-class SwiftBDD: NSObject {
+public class SwiftBDD: NSObject {
     
-    @objc static let shared = SwiftBDD()
+    @objc public static let shared = SwiftBDD()
     
     var steps: [Steps] = []
     var launchArguments: [String] = []
