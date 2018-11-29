@@ -16,5 +16,6 @@ DESC
   s.requires_arc = true
 
   s.source_files = 'Source/**/*'
+  s.framework = 'XCTest'
   s.dependency 'Cucumberish'
 end
