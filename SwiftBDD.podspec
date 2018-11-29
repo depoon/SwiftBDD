@@ -10,7 +10,7 @@ DESC
   s.homepage         = "https://github.com/depoon/SwiftBDD"
   s.license          = 'MIT'
   s.author           = { "depoon" => "de_poon@hotmail.com" }
-  s.source           = { :git => "https://github.com/depoon/NetworkInterceptor.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/depoon/SwiftBDD.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '10.0'
   s.requires_arc = true
