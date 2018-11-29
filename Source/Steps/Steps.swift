@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Steps {
+public protocol Steps {
     
     func setupSteps()
 }
