@@ -10,7 +10,7 @@ import Cucumberish
 
 class ApplicationSteps: Steps {
     
-    func setupSteps() {
+    open func setupSteps() {
         
         Given("App is ready") { (args, userInfo) -> Void in
             let app = XCUIApplication()

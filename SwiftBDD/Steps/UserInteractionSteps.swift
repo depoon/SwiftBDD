@@ -10,7 +10,7 @@ import Cucumberish
 
 class UserInteractionSteps: Steps {
     
-    func setupSteps() {
+    open func setupSteps() {
         
         When("I tap on \"([^\\\"]*)\"") { (args, userInfo) -> Void in
             let describable: String = args![0]

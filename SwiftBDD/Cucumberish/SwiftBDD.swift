@@ -20,10 +20,11 @@ class SwiftBDD: NSObject {
     
     var currentPage: Page? = nil
     
-    open func setup(_ steps: [Steps],
+    public func setup(_ steps: [Steps],
                          launchArguments: [String] = [],
                          launchEnvironment: [String: String] = [:],
-                         appBundleIdentifier: String? = nil) {
+                         appBundleIdentifier: String? = nil,
+                         featuresInfo: SwiftBDDFeaturesExecutionInfo) {
         self.steps = steps
         self.launchArguments = launchArguments
         self.launchEnvironment = launchEnvironment
@@ -37,12 +38,17 @@ class SwiftBDD: NSObject {
             
         })
         
+        Cucumberish.executeFeatures(inDirectory: featuresInfo.folderName,
+                                    from: featuresInfo.bundle,
+                                    includeTags: featuresInfo.includeTags,
+                                    excludeTags: featuresInfo.excludeTags)
+        
         after({ _ in
             XCUIApplication().terminate()
         })
     }
     
-    var defaultSteps: [Steps] {
+    public var defaultSteps: [Steps] {
         let s: [Steps] = [
             ApplicationSteps(),
             AssertionSteps(),
@@ -105,6 +111,23 @@ class SwiftBDD: NSObject {
         return itemsTags
     }
  */
+}
+
+public struct SwiftBDDFeaturesExecutionInfo {
+    public let folderName: String
+    public let bundle: Bundle
+    public let includeTags: [String]?
+    public let excludeTags: [String]?
+    
+    public init(folderName: String,
+         bundle: Bundle,
+         includeTags: [String]? = nil,
+         excludeTags: [String]? = nil) {
+        self.folderName = folderName
+        self.bundle = bundle
+        self.includeTags = includeTags
+        self.excludeTags = excludeTags
+    }
 }
 
 func AndWhen(_ definitionString: String, body: @escaping CCIStepBody) {

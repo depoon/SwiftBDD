@@ -8,9 +8,9 @@
 import Foundation
 import Cucumberish
 
-class AssertionSteps: Steps {
+public class AssertionSteps: Steps {
     
-    func setupSteps() {
+    open func setupSteps() {
         
         Then("I should see \"([^\\\"]*)\"") { (args, userInfo) -> Void in
             let describable: String = args![0]
