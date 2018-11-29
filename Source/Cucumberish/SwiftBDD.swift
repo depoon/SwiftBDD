@@ -20,7 +20,7 @@ class SwiftBDD: NSObject {
     
     var currentPage: Page? = nil
     
-    public func setup(_ steps: [Steps],
+    public func setup(steps: [Steps],
                          launchArguments: [String] = [],
                          launchEnvironment: [String: String] = [:],
                          appBundleIdentifier: String? = nil,
